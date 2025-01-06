@@ -1,0 +1,31 @@
+[project]
+src = "src"
+out = "out"
+dot_env = ".env"
+
+[networks.pyevm]
+is_zksync = false
+
+[networks.anvil]
+url = "http://127.0.0.1:8545"
+prompt_live = false
+save_to_db = false
+default_account_name = "anvil1"
+unsafe_password_file = "~/.moccasin/unsafe-passwords/anvil1"
+chain_id = 31337
+
+[networks.sepolia]
+url = "https://ethereum-sepolia-rpc.publicnode.com"
+chain_id = 11155111
+
+[networks.zksync-sepolia]
+url = "$ZKSYNC_SEPOLIA_RPC_URL"
+chain_id = 300
+save_to_db = false
+default_account_name = "my_account"
+explorer_uri = "https://explorer.sepolia.era.zksync.dev"
+explorer_type = "zksyncexplorer"
+is_zksync = true
+
+
+# You can view all configuration options at https://cyfrin.github.io/moccasin/all_moccasin_toml_parameters.html
